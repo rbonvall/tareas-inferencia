@@ -1,0 +1,53 @@
+Verificar que el operador \(\PAND(a, b) = ab\)
+cumple las propiedades de T-norma.
+%
+\begin{description}
+  \item[Conmutatividad:]
+    \(
+      \PAND(a, b) =
+      ab =
+      ba =
+      \PAND(b, a).
+    \)
+  \item[Asociatividad:]
+    \(
+      \PAND\bigl(a, \PAND(b, c)\bigr) =
+      \PAND(a, bc) =
+      a(bc) =
+      (ab)c =
+      \PAND(ab, c) =
+      \PAND\bigl(\PAND(a, b), c\bigr).
+    \)
+  \item[1 es la identidad:]
+    \(
+      \PAND(a, 1) = a\cdot 1 = a.
+    \)
+  \item[Monotonía:] sean \(a ≤ c\), \(b ≤ d\).
+
+\end{description}
+
+Verificar que el operador \(\LAND(a, b) = \max\{0, a + b - 1\}\)
+cumple las propiedades de T-norma.
+%
+\begin{description}
+  \item[Conmutatividad:]
+    \(
+      \LAND(a, b) =
+      \max\{0, a + b - 1\} =
+      \max\{0, b + a - 1\} =
+      \LAND(b, a).
+    \)
+  \item[Asociatividad:]
+    \(
+      \LAND\bigl(a, \LAND(b, c)\bigr) =
+      \LAND\bigl(a, \max\{0, b + c - 1\}\bigr) =
+      \max\bigl\{0, a + \max\{0, b + c - 1\}\bigl\} =
+    \)
+  \item[1 es la identidad:]
+    \(
+      \PAND(a, 1) = a\cdot 1 = a.
+    \)
+  \item[Monotonía:] sean \(a ≤ c\), \(b ≤ d\).
+
+\end{description}
+

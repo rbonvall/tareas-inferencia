@@ -1,0 +1,52 @@
+Verificar que el operador \(\POR(a, b) = a + b - ab\)
+cumple las propiedades de S-norma.
+%
+\begin{description}
+  \item[Conmutatividad:]
+    \(
+      \POR(a, b) =
+      a + b - ab =
+      b + a - ba =
+      \POR(b, a).
+    \)
+  \item[Asociatividad:]
+    \(
+      \POR\bigl(a, \POR(b, c)\bigr) =
+      \POR(a, b + c - bc) =
+      a + (b + c - bc) - a(b + c - bc) =
+      a + b + c - bc - ab - ac - abc =
+      (a + b - ab) + c - (a + b - ab)c =
+      \POR(a + b - ab, c) =
+      \POR\bigl(\POR(a, b), c\bigr).
+    \)
+  \item[0 es la identidad:]
+    \(
+      \POR(a, 0) = a + 0 - a\cdot 0 = a.
+    \)
+  \item[Monotonía:] sean \(a ≤ c\), \(b ≤ d\).
+\end{description}
+
+Verificar que el operador \(\LOR(a, b) = \min\{a + b, 1\}\)
+cumple las propiedades de S-norma.
+%
+\begin{description}
+  \item[Conmutatividad:]
+    \(
+      \LOR(a, b) =
+      \min\{a + b, 1\} =
+      \min\{b + a, 1\} =
+      \LOR(b, a).
+    \)
+  \item[Asociatividad:]
+    \(
+      \LOR\bigl(a, \LOR(b, c)\bigr) =
+    \)
+  \item[0 es la identidad:]
+    \(
+      \LOR(a, 0) =
+      \min\{a, 1\} =
+      a.
+    \)
+  \item[Monotonía:] sean \(a ≤ c\), \(b ≤ d\).
+\end{description}
+
