@@ -5,6 +5,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{fullpage}
+\usepackage{enumitem}
 
 \DeclareMathOperator{\LAND}{LAND}
 \DeclareMathOperator{\LOR} {LOR}
@@ -24,109 +25,120 @@ En las demostraciones siguientes,
 siempre se supondrá que
 \(0\le a, b, c, d\le 1\).
 
-Verificar que el operador \(\PAND(a, b) = ab\)
-cumple las propiedades de T-norma.
-%
-\begin{description}
-  \item[Conmutatividad:]
-    \(
-      \PAND(a, b) =
-      ab =
-      ba =
-      \PAND(b, a).
-    \)
-  \item[Asociatividad:]
-    \(
-      \PAND\bigl(a, \PAND(b, c)\bigr) =
-      \PAND(a, bc) =
-      a(bc) =
-      (ab)c =
-      \PAND(ab, c) =
-      \PAND\bigl(\PAND(a, b), c\bigr).
-    \)
-  \item[1 es la identidad:]
-    \(
-      \PAND(a, 1) = a\cdot 1 = a.
-    \)
-  \item[Monotonía:] sean \(a\le c\), \(b\le d\).
+\begin{enumerate}[
+  label=\arabic*.,
+  font=\LARGE\bfseries,%
+  labelindent=-.5in,%
+  leftmargin=0pt,%
+  labelsep=1em%
+]
 
-\end{description}
+  \item[1-i.]
+    Verificar que el operador \(\PAND(a, b) = ab\)
+    cumple las propiedades de T-norma.
+    %
+    \begin{description}
+      \item[Conmutatividad:]
+        \(
+          \PAND(a, b) =
+          ab =
+          ba =
+          \PAND(b, a).
+        \)
+      \item[Asociatividad:]
+        \(
+          \PAND\bigl(a, \PAND(b, c)\bigr) =
+          \PAND(a, bc) =
+          a(bc) =
+          (ab)c =
+          \PAND(ab, c) =
+          \PAND\bigl(\PAND(a, b), c\bigr).
+        \)
+      \item[1 es la identidad:]
+        \(
+          \PAND(a, 1) = a\cdot 1 = a.
+        \)
+      \item[Monotonía:] sean \(a\le c\), \(b\le d\).
 
-Verificar que el operador \(\LAND(a, b) = \max\{0, a + b - 1\}\)
-cumple las propiedades de T-norma.
-%
-\begin{description}
-  \item[Conmutatividad:]
-    \(
-      \LAND(a, b) =
-      \max\{0, a + b - 1\} =
-      \max\{0, b + a - 1\} =
-      \LAND(b, a).
-    \)
-  \item[Asociatividad:]
-    \(
-      \LAND\bigl(a, \LAND(b, c)\bigr) =
-      \LAND\bigl(a, \max\{0, b + c - 1\}\bigr) =
-      \max\bigl\{0, a + \max\{0, b + c - 1\}\bigl\} =
-    \)
-  \item[1 es la identidad:]
-    \(
-      \PAND(a, 1) = a\cdot 1 = a.
-    \)
-  \item[Monotonía:] sean \(a\le c\), \(b\le d\).
+    \end{description}
 
-\end{description}
+    Verificar que el operador \(\LAND(a, b) = \max\{0, a + b - 1\}\)
+    cumple las propiedades de T-norma.
+    %
+    \begin{description}
+      \item[Conmutatividad:]
+        \(
+          \LAND(a, b) =
+          \max\{0, a + b - 1\} =
+          \max\{0, b + a - 1\} =
+          \LAND(b, a).
+        \)
+      \item[Asociatividad:]
+        \(
+          \LAND\bigl(a, \LAND(b, c)\bigr) =
+          \LAND\bigl(a, \max\{0, b + c - 1\}\bigr) =
+          \max\bigl\{0, a + \max\{0, b + c - 1\}\bigl\} =
+        \)
+      \item[1 es la identidad:]
+        \(
+          \PAND(a, 1) = a\cdot 1 = a.
+        \)
+      \item[Monotonía:] sean \(a\le c\), \(b\le d\).
 
-Verificar que el operador \(\POR(a, b) = a + b - ab\)
-cumple las propiedades de S-norma.
-%
-\begin{description}
-  \item[Conmutatividad:]
-    \(
-      \POR(a, b) =
-      a + b - ab =
-      b + a - ba =
-      \POR(b, a).
-    \)
-  \item[Asociatividad:]
-    \(
-      \POR\bigl(a, \POR(b, c)\bigr) =
-      \POR(a, b + c - bc) =
-      a + (b + c - bc) - a(b + c - bc) =
-      a + b + c - bc - ab - ac - abc =
-      (a + b - ab) + c - (a + b - ab)c =
-      \POR(a + b - ab, c) =
-      \POR\bigl(\POR(a, b), c\bigr).
-    \)
-  \item[0 es la identidad:]
-    \(
-      \POR(a, 0) = a + 0 - a\cdot 0 = a.
-    \)
-  \item[Monotonía:] sean \(a\le c\), \(b\le d\).
-\end{description}
+    \end{description}
 
-Verificar que el operador \(\LOR(a, b) = \min\{a + b, 1\}\)
-cumple las propiedades de S-norma.
-%
-\begin{description}
-  \item[Conmutatividad:]
-    \(
-      \LOR(a, b) =
-      \min\{a + b, 1\} =
-      \min\{b + a, 1\} =
-      \LOR(b, a).
-    \)
-  \item[Asociatividad:]
-    \(
-      \LOR\bigl(a, \LOR(b, c)\bigr) =
-    \)
-  \item[0 es la identidad:]
-    \(
-      \LOR(a, 0) =
-      \min\{a, 1\} =
-      a.
-    \)
-  \item[Monotonía:] sean \(a\le c\), \(b\le d\).
-\end{description}
+  \item[1-ii.]
+    Verificar que el operador \(\POR(a, b) = a + b - ab\)
+    cumple las propiedades de S-norma.
+    %
+    \begin{description}
+      \item[Conmutatividad:]
+        \(
+          \POR(a, b) =
+          a + b - ab =
+          b + a - ba =
+          \POR(b, a).
+        \)
+      \item[Asociatividad:]
+        \(
+          \POR\bigl(a, \POR(b, c)\bigr) =
+          \POR(a, b + c - bc) =
+          a + (b + c - bc) - a(b + c - bc) =
+          a + b + c - bc - ab - ac - abc =
+          (a + b - ab) + c - (a + b - ab)c =
+          \POR(a + b - ab, c) =
+          \POR\bigl(\POR(a, b), c\bigr).
+        \)
+      \item[0 es la identidad:]
+        \(
+          \POR(a, 0) = a + 0 - a\cdot 0 = a.
+        \)
+      \item[Monotonía:] sean \(a\le c\), \(b\le d\).
+    \end{description}
+
+    Verificar que el operador \(\LOR(a, b) = \min\{a + b, 1\}\)
+    cumple las propiedades de S-norma.
+    %
+    \begin{description}
+      \item[Conmutatividad:]
+        \(
+          \LOR(a, b) =
+          \min\{a + b, 1\} =
+          \min\{b + a, 1\} =
+          \LOR(b, a).
+        \)
+      \item[Asociatividad:]
+        \(
+          \LOR\bigl(a, \LOR(b, c)\bigr) =
+        \)
+      \item[0 es la identidad:]
+        \(
+          \LOR(a, 0) =
+          \min\{a, 1\} =
+          a.
+        \)
+      \item[Monotonía:] sean \(a\le c\), \(b\le d\).
+    \end{description}
+\end{enumerate}
 
 \end{document}
