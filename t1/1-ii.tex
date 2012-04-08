@@ -37,10 +37,29 @@ cumple las propiedades de S-norma.
       \min\{b + a, 1\} =
       \LOR(b, a).
     \)
-  \item[Asociatividad:]
-    \(
-      \LOR\bigl(a, \LOR(b, c)\bigr) =
-    \)
+  \item[Asociatividad:] consideremos todos los casos posibles.
+    \begin{align*}
+      \LOR\bigl(a, \LOR(b, c)\bigr)
+      &= \LOR(a, \min\{b + c, 1\}) \\
+      &= \begin{cases}
+           \LOR(a, 1)     & \text{si } b + c ≥ 1 \\
+           \LOR(a, b + c) & \text{si } b + c < 1 \\
+         \end{cases} \\
+      &= \begin{cases}
+           \min\{a + 1, 1\}     & \text{si } b + c ≥ 1 \\
+           \min\{a + b + c, 1\} & \text{si } b + c < 1 \\
+         \end{cases} \\
+      &= \begin{cases}
+           1         & \text{si } b + c ≥ 1 \\
+           a + b + c & \text{si } b + c < 1 \text{ y } a + b + c < 1 \\
+           1         & \text{si } b + c < 1 \text{ y } a + b + c ≥ 1 \\
+         \end{cases}
+    \end{align*}
+    El mismo argumento de la demostración
+    de la asociatividad de \(\LAND\) se puede aplicar aquí:
+    \(b + c < 1\) es redundante en la segunda regla,
+    y por simetría
+    \(\LOR\bigl(a, \LOR(b, c)\bigr) = \LOR\bigl(c, \LOR(a, b)\bigr)\).
   \item[0 es la identidad:]
     \(
       \LOR(a, 0) =

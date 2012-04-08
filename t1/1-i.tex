@@ -37,15 +37,51 @@ cumple las propiedades de T-norma.
       \max\{0, b + a - 1\} =
       \LAND(b, a).
     \)
-  \item[Asociatividad:]
-    \(
+  \item[Asociatividad:] consideremos todos los casos posibles.
+    \begin{align*}
+      \LAND\bigl(a, \LAND(b, c)\bigr)
+      &= \LAND(a, \max\{0, b + c - 1\}) \\
+      &= \begin{cases}
+           \LAND(a, b + c - 1)  & \text{si } b + c ≥ 1 \\
+           \LAND(a, 0)          & \text{si } b + c < 1 \\
+         \end{cases} \\
+      &= \begin{cases}
+           \max\{0, a + b + c - 2\}  & \text{si } b + c ≥ 1 \\
+           \max\{0, a - 1\}          & \text{si } b + c < 1 \\
+         \end{cases} \\
+      &= \begin{cases}
+           0              & \text{si } b + c ≥ 1 \text{ y } a + b + c < 2 \\
+           a + b + c - 2  & \text{si } b + c ≥ 1 \text{ y } a + b + c ≥ 2 \\
+           0              & \text{si } b + c < 1 \\
+         \end{cases} \\
+    \end{align*}
+    La restricción que define la única región en que la norma es no nula
+    se puede reescribir como:
+    \begin{equation*}
+       b + c ≥ 1 \quad\text{y}\quad b + c ≥ 2 - a.
+    \end{equation*}
+    Como siempre se cumple que \(2 - a ≥ 1\),
+    entonces la primera parte de la restricción es redundante.
+    Por lo tanto:
+    \begin{equation*}
+      \LAND\bigl(a, \LAND(b, c)\bigr)
+       = \begin{cases}
+           a + b + c - 2  & \text{si } a + b + c ≥ 2 \\
+           0              & \text{en cualquier otro caso.} \\
+         \end{cases}
+    \end{equation*}
+    La expresión obtenida es simétrica
+    con respecto a \(a\), \(b\) y \(c\).
+    Por lo tanto,
+    si intercambiamos las variables de entrada
+    obtendremos el mismo resultado:
+    \begin{equation*}
       \LAND\bigl(a, \LAND(b, c)\bigr) =
-      \LAND\bigl(a, \max\{0, b + c - 1\}\bigr) =
-      \max\bigl\{0, a + \max\{0, b + c - 1\}\bigl\} =
-    \)
+      \LAND\bigl(c, \LAND(a, b)\bigr).
+    \end{equation*}
   \item[1 es la identidad:]
     \(
-      \PAND(a, 1) = a\cdot 1 = a.
+      \LAND(a, 1) = \max\{0, a + 1 - 1\} = \max\{0, a\} = a.
     \)
   \item[Monotonía:] sean \(a ≤ c\), \(b ≤ d\).
 
