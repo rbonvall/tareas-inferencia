@@ -5,7 +5,7 @@ Para un \(x ∈ X\) cualquiera,
 definamos \(a = μ_A(x)\),
 \(b = μ_B(x)\) y
 \(c = μ_C(x)\).
-\begin{align}
+\begin{align*}
      μ_{A ∩ (B ∪ C)}(x)
   &= \PAND\Bigl(
        μ_A(x),
@@ -13,9 +13,9 @@ definamos \(a = μ_A(x)\),
      \Bigr) \\
   &= \PAND\bigl(a, \POR(b, c)\bigr) \\
   &= a(b + c - bc).
-\end{align}
+\end{align*}
 Por otra parte:
-\begin{align}
+\begin{align*}
      μ_{(A ∩ B) ∪ (A ∩ C)}(x)
   &= \POR\Bigl(
        \PAND\bigl(μ_A(x), μ_B(x)\bigr),
@@ -28,7 +28,7 @@ Por otra parte:
   &= \POR(ab, ac) \\
   &= ab + ac - a^2 bc \\
   &= a(b + c - abc).
-\end{align}
+\end{align*}
 
 
 Verificar si \(A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)\)
@@ -38,7 +38,7 @@ Para un \(x ∈ X\) cualquiera,
 definamos \(a = μ_A(x)\),
 \(b = μ_B(x)\) y
 \(c = μ_C(x)\).
-\begin{align}
+\begin{align*}
      μ_{A ∩ (B ∪ C)}(x)
   &= \LAND\Bigl(
        μ_A(x),
@@ -46,5 +46,5 @@ definamos \(a = μ_A(x)\),
      \Bigr) \\
   &= \LAND\bigl(a, \LOR(b, c)\bigr) \\
   &= \LAND(a, \min{1, b + c}) \\
-\end{align}
+\end{align*}
 

@@ -2,18 +2,18 @@ Verificar si \(A ∩ \comp{A} = ∅\)
 con las normas \(\PAND\) y \(\POR\).
 
 Para un \(x ∈ X\) cualquiera, definamos \(a = μ_A(x)\).
-\begin{align}
+\begin{align*}
      μ_{A ∩ \comp{A}}(x)
   &= \PAND\bigl(μ_A(x), μ_{\comp{A}}(x)\bigr) \\
   &= \PAND(a, 1 - a) \\
   &= a(1 - a) \\
   &= a - a^2.
-\end{align}
+\end{align*}
 Si elegimos \(μ_A\) y \(x_0\) tales que \(μ_A(x_0) = 0.5\),
 entonces:
-\begin{equation}
+\begin{equation*}
   μ_{A ∩ \comp{A}}(x_0) = 0.5 - 0.25 = 0.25 ≠ 0 = μ_∅(x_0).
-\end{equation}
+\end{equation*}
 Este contraejemplo demuestra que
 la propiedad no es satisfecha por las normas probabilísticas.
 
@@ -22,12 +22,12 @@ Verificar si \(A ∩ \comp{A} = ∅\)
 con las normas \(\LAND\) y \(\LOR\).
 
 Para un \(x ∈ X\) cualquiera, definamos \(a = μ_A(x)\).
-\begin{align}
+\begin{align*}
      μ_{A ∩ \comp{A}}(x)
   &= \LAND\bigl(μ_A(x), μ_{\comp{A}}(x)\bigr) \\
   &= \LAND(a, 1 - a) \\
   &= \max\{0, a + (1 - a) - 1\} \\
   &= \max\{0, 0\} = 0 = μ_∅(x).
-\end{align}
+\end{align*}
 Por lo tanto,
 la propiedad sí es satisfecha por las normas de Łukasiewics.

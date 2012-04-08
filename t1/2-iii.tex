@@ -2,18 +2,18 @@ Verificar si \(A ∪ \comp{A} = X\)
 con las normas \(\PAND\) y \(\POR\).
 
 Para un \(x ∈ X\) cualquiera, definamos \(a = μ_A(x)\).
-\begin{align}
+\begin{align*}
      μ_{A ∪ \comp{A}}(x)
   &= \POR\bigl(μ_A(x), μ_{\comp{A}}(x)\bigr) \\
   &= \POR(a, 1 - a) \\
   &= a + (1 - a) - a(1 - a) \\
   &= 1  - a + a^2.
-\end{align}
+\end{align*}
 Si elegimos \(μ_A\) y \(x_0\) tales que \(μ_A(x_0) = 0.5\),
 entonces:
-\begin{equation}
+\begin{equation*}
   μ_{A ∪ \comp{A}}(x_0) = 1 - 0.5 + 0.25 = 0.75 ≠ 1 = μ_X(x_0).
-\end{equation}
+\end{equation*}
 Este contraejemplo demuestra que
 la propiedad no es satisfecha por las normas probabilísticas.
 
@@ -22,12 +22,12 @@ Verificar si \(A ∪ \comp{A} = X\)
 con las normas \(\LAND\) y \(\LOR\).
 
 Para un \(x ∈ X\) cualquiera, definamos \(a = μ_A(x)\).
-\begin{align}
+\begin{align*}
      μ_{A ∪ \comp{A}}(x)
   &= \LOR\bigl(μ_A(x), μ_{\comp{A}}(x)\bigr) \\
   &= \LOR(a, 1 - a) \\
   &= \max\{a + (1 - a), 1\} \\
   &= \max\{1, 1\} = 1 = μ_X(x).
-\end{align}
+\end{align*}
 Por lo tanto,
 la propiedad sí es satisfecha por las normas de Łukasiewics.
