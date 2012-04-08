@@ -12,6 +12,7 @@
 \DeclareMathOperator{\PAND}{PAND}
 \DeclareMathOperator{\POR} {POR}
 \newcommand\comp{\overline}
+\newcommand\respuesta[1]{\item[#1.]\input{t1/#1}}
 
 \parindent 0pt
 
@@ -34,23 +35,12 @@ siempre se supondrá que
   labelsep=1em%
 ]
 
-  \item[1-i.]
-    \input{t1/1-i}
-
-  \item[1-ii.]
-    \input{t1/1-ii}
-
-  \item[2-i.]
-    \input{t1/2-i}
-
-  \item[2-ii.]
-    \input{t1/2-ii}
-
-  \item[2-iii.]
-    \input{t1/2-iii}
-
-  \item[2-iv.]
-    \input{t1/2-iv}
+  \respuesta{1-i}
+  \respuesta{1-ii}
+  \respuesta{2-i}
+  \respuesta{2-ii}
+  \respuesta{2-iii}
+  \respuesta{2-iv}
 
 \end{enumerate}
 
