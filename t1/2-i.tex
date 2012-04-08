@@ -1,6 +1,47 @@
 Verificar si \(\comp{A ∩ B} = \comp{A} ∪ \comp{B}\)
 con las normas \(\PAND\) y \(\POR\).
 
+Para un \(x ∈ X\) cualquiera,
+definamos \(a = μ_A(x)\)
+y \(b = μ_B(x)\).
+\begin{align}
+     μ_{\comp{A ∩ B}}(x)
+  &= 1 - μ_{A ∩ B}(x) \\
+  &= 1 - \PAND(μ_A(x), μ_B(x)) \\
+  &= 1 - \PAND(a, b) \\
+  &= 1 - (a + b - ab) \\
+  &= (1 - a)(1 - b) \\
+  &= \POR(1 - a, 1 - b) \\
+  &= μ_{\comp{A} ∪ \comp{B}}(x)
+\end{align}
+Por lo tanto,
+la propiedad sí es satisfecha por las normas probabilísticas.
+
+
 Verificar si \(\comp{A ∩ B} = \comp{A} ∪\comp{B}\)
 con las normas \(\LAND\) y \(\LOR\).
 
+Para un \(x ∈ X\) cualquiera,
+definamos \(a = μ_A(x)\)
+y \(b = μ_B(x)\).
+\begin{align}
+     μ_{\comp{A ∩ B}}(x)
+  &= 1 - μ_{A ∩ B}(x) \\
+  &= 1 - \LAND(μ_A(x), μ_B(x)) \\
+  &= 1 - \LAND(a, b) \\
+  &= 1 - \max\{0, a + b - 1\} \\
+  &= \begin{cases}
+       1 - (a + b - 1) & \text{si } a + b ≥ 1 \\
+       1 - 0           & \text{en otro caso} \\
+     \end{cases} \\
+  &= \begin{cases}
+       2 - a - b & \text{si } 2 - (a + b) < 1 \\
+       1         & \text{en otro caso} \\
+     \end{cases} \\
+  &= \min\{1, 2 - a - b\} \\
+  &= \min\{1, (1 - a) + (1 - b)\} \\
+  &= \LOR(1 - a, 1 - b) \\
+  &= μ_{\comp{A} ∪ \comp{B}}(x)
+\end{align}
+Por lo tanto,
+la propiedad sí es satisfecha por las normas de Łukasiewics.
