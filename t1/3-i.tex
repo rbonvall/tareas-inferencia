@@ -1,0 +1,17 @@
+\enunciado{%
+  \(R, S\) relaciones difusas de \(X\) en \(Y\).
+  Verificar que \((R ∪ S)^{-1} = R^{-1} ∪ S^{-1}\).
+}
+
+Para todos \(x ∈ X\) e \(y ∈ Y\):
+\begin{align*}
+     μ_{(R ∪ S)^{-1}}(y, x)
+  &= μ_{ R ∪ S}(x, y) \\
+  &= μ_R(x, y) ∨ μ_S(x, y) \\
+  &= μ_{R^{-1}}(y, x) ∨ μ_{S^{-1}}(y, x) \\
+  &= μ_{R^{-1} ∪ S^{-1}}(y, x).
+\end{align*}
+
+Ya que las funciones de membresía de ambas relaciones son iguales,
+entonces se verifica que \((R ∪ S)^{-1} = R^{-1} ∪ S^{-1}\).
+
