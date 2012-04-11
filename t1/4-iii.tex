@@ -1,0 +1,39 @@
+\enunciado{%
+  \(R\) relación difusa en \(X × Y\),
+  \(S, T\) relaciones difusa en \(Y × Z\).
+  Verificar que \(S ⊆ T ⇒ R\circ S ⊆ R\circ T\).
+}
+
+\(R\circ S\) y \(R\circ T\) son relaciones en \(X × Z\).
+Sus funciones de membresía son:
+\begin{align*}
+  μ_{R\circ S}(x, z) &= \max_{y ∈ Y}\bigl\{
+    \min\{
+      \underbrace{μ_R(x, y)}_{r(y)},
+      \underbrace{μ_S(y, z)}_{s(y)}
+    \}
+  \bigr\}
+  \\
+  μ_{R\circ T}(x, z) &= \max_{y ∈ Y}\bigl\{
+    \min\{
+      \underbrace{μ_R(x, y)}_{r(y)},
+      \underbrace{μ_T(y, z)}_{t(y)}
+    \}
+  \bigr\}
+\end{align*}
+Para \(x\) y \(z\) fijos,
+definamos \(r(y)\), \(s(y)\) y \(t(y)\)
+como se indica en las expresiones anteriores.
+
+Si \(S ⊆ T\), entonces \(μ_S ≤ μ_T\), y para todo \(y ∈ Y\):
+\begin{align*}
+     s(y)
+  &≤ t(y) \\
+     \min\{r(y), s(y)\}
+  &≤ \min\{r(y), t(y)\} \\
+     \max_{y ∈ Y}\bigl\{\min\{r(y), s(y)\}\bigr\}
+  &≤ \max_{y ∈ Y}\bigl\{\min\{r(y), t(y)\}\bigr\}.
+\end{align*}
+Luego, \(μ_{R\circ S} ≤ μ_{R\circ T}\),
+y por lo tanto \(R\circ S ⊆ R\circ T\).
+
