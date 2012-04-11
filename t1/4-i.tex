@@ -1,0 +1,29 @@
+\enunciado{%
+  \(R\) relación difusa de \(X\) en \(Y\),
+  \(S\) relación difusa de \(Y\) en \(Z\).
+  Verificar que \((R\circ S)^{-1} = S^{-1}\circ R^{-1}\).
+}
+
+\((R\circ S)^{-1}\) es una relación de \(Z\) en \(X\).
+Para todos \(x ∈ X\) y \(z ∈ Z\):
+\begin{align*}
+     μ_{(R\circ S)^{-1}}(z, x)
+  &= μ_{R\circ S}(x, z) \\
+  &= \max_{y ∈ Y}\bigl\{
+       \min\{
+         μ_R(x, y),
+         μ_S(y, z)
+       \}
+     \bigr\} \\
+  &= \max_{y ∈ Y}\bigl\{
+       \min\{
+         μ_{S^{-1}}(z, y),
+         μ_{R^{-1}}(y, x)
+       \}
+     \bigr\} \\
+  &= μ_{S^{-1}\circ R^{-1}}(x, z).
+\end{align*}
+
+Ya que las funciones de membresía de ambas relaciones son iguales,
+entonces se verifica que \((R\circ S)^{-1} = S^{-1}\circ R^{-1}\).
+
