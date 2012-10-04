@@ -65,7 +65,21 @@ definamos \(a = μ_A(x)\),
        \LOR\bigl(μ_B(x), μ_C(x)\bigr)
      \Bigr) \\
   &= \LAND\bigl(a, \LOR(b, c)\bigr) \\
-  &= \LAND(a, \min{1, b + c}) \\
+  &= \LAND(a, \min\{1, b + c\}) \\
+  &= \begin{cases}
+       \LAND(a, 1)     & si b + c > 1 \\
+       \LAND(a, b + c) & si b + c ≤ 1
+     \end{cases}
+  &= \begin{cases}
+       a                      & si b + c > 1 \\
+       \max{0, a + b + c - 1) & si b + c ≤ 1
+     \end{cases}
+  &= \vdots \\
+  &= \LOR\Bigl(
+       \LAND(a, b),
+       \LAND(a, c),
+     \Bigr) \\
+  &= μ_{(A ∩ B) ∪ (A ∩ C)}(x)
 \end{align*}
 
 \saltito
